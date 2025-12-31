@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alarab Global Holdings</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050913;
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      margin-top: 50px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #cfd6ff;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .box {
+      background: #0b1220;
+      padding: 25px;
+      border-radius: 14px;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .highlight {
+      color: #7fb6ff;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid #222;
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>ALARAB GLOBAL HOLDINGS</h1>
+    <p class="highlight">
+      Global Access. Trusted Execution. Pay After Service.
+    </p>
+
+    <h2>Who We Are</h2>
+    <div class="box">
+      <p>
+        Alarab Global Holdings is a US-based international group providing access
+        to trusted services worldwide. We operate with a simple philosophy:
+        <strong>Transparency, Trust, and Results.</strong>
+      </p>
+    </div>
+
+    <h2>Our Services</h2>
+    <div class="box">
+      <ul>
+        <li>✔ Global Hotel Reservations</li>
+        <li>✔ International Transportation & VIP Services</li>
+        <li>✔ Medical & Wellness Services</li>
+        <li>✔ Business & Company Formation</li>
+        <li>✔ Legal & Residency Assistance</li>
+        <li>✔ International Trade & Logistics</li>
+      </ul>
+    </div>
+
+    <h2>Our Model</h2>
+    <div class="box">
+      <p>
+        We operate on a unique <strong>Access Fee Model</strong> that allows clients
+        to receive services first and pay after execution — ensuring full trust,
+        transparency, and satisfaction.
+      </p>
+    </div>
+
+    <h2>Why Alarab Global</h2>
+    <div class="box">
+      <ul>
+        <li>✔ No upfront risk</li>
+        <li>✔ Trusted international partners</li>
+        <li>✔ Transparent pricing</li>
+        <li>✔ Long-term relationship model</li>
+      </ul>
+    </div>
+
+    <footer>
+      © 2025 Alarab Global Holdings — All Rights Reserved
+    </footer>
+
+  </div>
+
+</body>
+</html>
