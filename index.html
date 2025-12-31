@@ -4,12 +4,218 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alarab Global Holdings</title>
-  <meta name="description" content="Global Access. Trusted Execution. Pay After Service." />
+  <meta name="description" content="Alarab Global Holdings — Global Access. Trusted Execution. Pay After Service." />
+  <meta name="theme-color" content="#050913" />
 
-  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    :root{
+      --bg0:#050913;
+      --bg1:#0b1220;
+      --text:#eaf0ff;
+      --muted:#b6c3e6;
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.04);
+      --accent:#6ea8ff;
+      --accent2:#8bffcf;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 12% 8%, rgba(110,168,255,.25), transparent 60%),
+        radial-gradient(900px 500px at 80% 18%, rgba(139,255,207,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 45%, var(--bg0) 100%);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;flex-wrap:wrap;padding:14px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;text-decoration:none;
+      font-weight:950;letter-spacing:.2px;
+    }
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 10px 30px rgba(110,168,255,.25);
+    }
+    .nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .pill{
+      border:1px solid var(--line);
+      color:var(--muted);
+      padding:8px 12px;border-radius:999px;
+      font-size:13px;background:rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.06);
+      color:var(--text);text-decoration:none;font-weight:900;
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+      box-shadow:0 12px 30px rgba(0,0,0,.18);
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.22)}
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(110,168,255,.95), rgba(139,255,207,.65));
+      border-color:rgba(255,255,255,.22);
+      color:#081124;
+    }
+
+    .hero{
+      margin-top:14px;
+      background:var(--glass);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(600px 240px at 10% 0%, rgba(110,168,255,.22), transparent 60%),
+        radial-gradient(600px 240px at 85% 0%, rgba(139,255,207,.16), transparent 60%);
+      pointer-events:none;
+      filter:blur(10px);
+    }
+    .hero > *{position:relative}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media(max-width:920px){.hero-grid{grid-template-columns:1fr}}
+
+    h1{
+      margin:0 0 10px;
+      font-size:46px;line-height:1.05;letter-spacing:-.8px;
+      text-transform:uppercase;
+    }
+    @media(max-width:520px){h1{font-size:36px}}
+    .sub{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:16px;line-height:1.65;
+      max-width:78ch;
+    }
+    .kpi{
+      display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px;
+    }
+    .kpi .tag{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      padding:8px 10px;border-radius:999px;
+      font-size:13px;
+    }
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+
+    .mini{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+    }
+    .mini h3{margin:0 0 8px;font-size:16px}
+    .mini p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+    .divider{height:1px;background:var(--line);margin:12px 0}
+    .notice{
+      font-size:12px;color:var(--muted);
+      border:1px dashed rgba(255,255,255,.22);
+      padding:10px 12px;border-radius:14px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .section{margin:26px 0}
+    .section h2{margin:0 0 10px;font-size:24px;letter-spacing:-.2px}
+    .lead{margin:0 0 16px;color:var(--muted);line-height:1.7;max-width:92ch}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin:16px 0 30px;
+    }
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-12{grid-column:span 12}
+    @media(max-width:920px){.col-6,.col-4{grid-column:span 12}}
+
+    .card{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,.22);
+    }
+    .service{display:flex;flex-direction:column;gap:10px;min-height:120px}
+    .service .title{font-weight:950}
+    .service .desc{margin:0;color:var(--muted);line-height:1.6;font-size:14px}
+
+    .trust-strip{
+      display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+      margin-top:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .trust-strip strong{color:var(--text)}
+
+    .footer{
+      margin:34px 0 10px;
+      padding:18px 0 6px;
+      border-top:1px solid var(--line);
+      display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer a{color:var(--muted);text-decoration:none}
+    .footer a:hover{text-decoration:underline}
+
+    .wa-float{
+      position:fixed;right:16px;bottom:16px;z-index:9999;
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none;
+      padding:12px 14px;border-radius:999px;
+      background:linear-gradient(135deg, rgba(139,255,207,.95), rgba(110,168,255,.85));
+      color:#081124;
+      font-weight:950;
+      box-shadow:0 18px 45px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.25);
+      transition:transform .12s ease;
+    }
+    .wa-float:hover{transform:translateY(-2px)}
+    .wa-dot{
+      width:10px;height:10px;border-radius:99px;background:#0b1220;
+      box-shadow:0 0 0 6px rgba(11,18,32,.15);
+    }
+    @media(max-width:520px){
+      .wa-float{padding:12px}
+      .wa-float span:last-child{display:none}
+    }
+    [id]{scroll-margin-top:90px}
+  </style>
 </head>
 
 <body>
+  <!-- WhatsApp floating button (EDIT PHONE) -->
   <a class="wa-float" href="https://wa.me/905345940818" target="_blank" rel="noopener">
     <span class="wa-dot"></span>
     <span>WhatsApp</span>
@@ -17,148 +223,184 @@
 
   <div class="wrap">
     <header class="nav">
-      <a class="brand" href="#">
+      <a class="brand" href="#top" aria-label="Alarab Global">
         <span class="logo" aria-hidden="true"></span>
         <span>ALARAB GLOBAL</span>
       </a>
 
       <div class="nav-right">
-        <span class="pill">US-based Holding Company</span>
+        <span class="pill">Global Access</span>
         <span class="pill">Trusted Execution</span>
-        <a class="btn primary" href="https://wa.me/905345940818" target="_blank" rel="noopener">Contact</a>
+        <span class="pill">Pay After Service</span>
+        <a class="btn" href="#services">Services</a>
+        <a class="btn primary" href="#contact">Contact</a>
       </div>
     </header>
 
-    <main class="h-card">
-      <section class="hero">
-        <div>
-          <h1>Global Access.<br>Trusted Execution.<br>Pay After Service.</h1>
+    <main id="top">
+      <section class="hero" aria-label="Hero">
+        <div class="hero-grid">
+          <div>
+            <h1>ALARAB GLOBAL HOLDINGS</h1>
+            <p class="sub">
+              A global brand built on trust, execution, and client safety.
+              We deliver high-quality travel and trusted services with a simple promise:
+              <strong>clarity, reliability, and results.</strong>
+            </p>
 
-          <p class="sub">
-            Alarab Global Holdings provides access to trusted services worldwide —
-            built on transparency, quality, and long-term relationships.
-          </p>
+            <div class="kpi" aria-label="Key points">
+              <span class="tag">5★ Quality First</span>
+              <span class="tag">Transparent Pricing</span>
+              <span class="tag">VIP Transportation</span>
+              <span class="tag">Global Hotel Access</span>
+            </div>
 
-          <div class="kpi">
-            <div class="tag">5★ Quality Standard</div>
-            <div class="tag">Transparent Pricing</div>
-            <div class="tag">Client Safety First</div>
-            <div class="tag">Pay After Service Model</div>
+            <div class="cta">
+              <a class="btn primary" href="#contact">Start on WhatsApp</a>
+              <a class="btn" href="#about">Who We Are</a>
+            </div>
+
+            <div class="trust-strip" role="note">
+              <strong>Core principle:</strong> We don’t sell pressure — we sell confidence.
+              After booking, we keep proving you made the right decision.
+            </div>
           </div>
 
-          <div class="cta">
-            <a class="btn primary" href="https://wa.me/905345940818" target="_blank" rel="noopener">WhatsApp Now</a>
-            <a class="btn" href="#services">Explore Services</a>
-          </div>
-
-          <div class="trust-strip">
-            <strong>Core Promise:</strong> Clear terms, clean execution, no surprises.
-          </div>
+          <aside class="mini" aria-label="Quick Info">
+            <h3>What we deliver</h3>
+            <p>
+              Premium trips & trusted execution — with disciplined systems behind the scenes.
+              Turkey is our current operational base, but the brand is built for global scale.
+            </p>
+            <div class="divider"></div>
+            <div class="notice">
+              This site is the first English version. Multi-language expansion will follow,
+              tailored by location and client profile.
+            </div>
+          </aside>
         </div>
+      </section>
 
-        <div class="side">
-          <div class="card mini">
-            <h3>Who We Are</h3>
-            <p>
-              A global holding group connecting clients with reliable partners in travel,
-              medical services, legal support, and international solutions.
-            </p>
+      <section id="about" class="section">
+        <h2>Who We Are</h2>
+        <p class="lead">
+          Alarab Global Holdings is an international group providing access to trusted services worldwide.
+          We operate with a simple philosophy: <strong>Transparency, Trust, and Results.</strong>
+        </p>
+
+        <div class="grid">
+          <div class="card col-6">
+            <div class="service">
+              <div class="title">Brand Philosophy</div>
+              <p class="desc">
+                Long-term relationships beat short-term deals. We focus on client safety, peace of mind,
+                and consistent 5★ execution — not price wars and not hype.
+              </p>
+            </div>
           </div>
-
-          <div class="card mini">
-            <h3>How We Work</h3>
-            <p>
-              We focus on trust-based execution: the client sees the value, receives the service,
-              and pays according to the agreed model.
-            </p>
-          </div>
-
-          <div class="notice">
-            This is the initial English version. Multi-language switching will be added next.
+          <div class="card col-6">
+            <div class="service">
+              <div class="title">How We Work</div>
+              <p class="desc">
+                Clear scope, clear expectations, and strong delivery. We keep operations disciplined,
+                protect client data, and build systems that scale without chaos.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="services">
+      <section id="services" class="section">
         <h2>Our Services</h2>
         <p class="lead">
-          We deliver carefully curated services through trusted suppliers and controlled execution.
-          The brand is built for premium outcomes — not price competition.
+          We currently focus on premium travel execution with trusted partners. More verticals will be added
+          under the holding structure as the system grows.
         </p>
 
         <div class="grid">
-          <div class="col-4">
-            <div class="card service">
-              <div class="title">Luxury Travel</div>
-              <p class="desc">Hotels, VIP transfers, curated city programs, and high-control execution.</p>
+          <div class="card col-4">
+            <div class="service">
+              <div class="title">Global Hotel Reservations</div>
+              <p class="desc">Handpicked stays with strong standards — comfort, location, and reliability.</p>
+            </div>
+          </div>
+          <div class="card col-4">
+            <div class="service">
+              <div class="title">VIP Transportation</div>
+              <p class="desc">Mercedes Vito VIP & premium vehicles with professional drivers.</p>
+            </div>
+          </div>
+          <div class="card col-4">
+            <div class="service">
+              <div class="title">Custom Travel Programs</div>
+              <p class="desc">Designed per client type: honeymoon, family, recovery, short trips, seniors.</p>
             </div>
           </div>
 
-          <div class="col-4">
-            <div class="card service">
-              <div class="title">Medical Tourism</div>
-              <p class="desc">Access to vetted clinics, coordination, and end-to-end trip support.</p>
+          <div class="card col-6">
+            <div class="service">
+              <div class="title">Pay After Service Model</div>
+              <p class="desc">
+                Built to maximize trust. We structure bookings and execution to reduce risk and increase confidence.
+                (Full model and flows will be published as the platform expands.)
+              </p>
             </div>
           </div>
-
-          <div class="col-4">
-            <div class="card service">
-              <div class="title">Legal & Business</div>
-              <p class="desc">International support through professional partners and clear processes.</p>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="card">
-              <div class="title">Global Access Fee (Transparent Model)</div>
-              <div class="divider"></div>
-              <ul class="list">
-                <li>Simple, transparent fee structure.</li>
-                <li>Clear terms before commitment.</li>
-                <li>Designed for trust and long-term relationships.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="card">
-              <div class="title">Brand Philosophy</div>
-              <div class="divider"></div>
-              <ul class="list">
-                <li>Quality-first (real 5★ standard).</li>
-                <li>No pressure selling, no gimmicks.</li>
-                <li>Client safety and experience before profit.</li>
-              </ul>
+          <div class="card col-6">
+            <div class="service">
+              <div class="title">B2B & Corporate Handling</div>
+              <p class="desc">
+                Support for agencies, corporate travel, and high-volume clients — with consistent standards and reporting.
+              </p>
             </div>
           </div>
         </div>
+
+        <div class="notice">
+          Note: This is a brand foundation page. Booking portals, instant hotel pricing, and expanded services
+          will be added step-by-step.
+        </div>
       </section>
 
-      <section class="section" id="contact">
+      <section id="contact" class="section">
         <h2>Contact</h2>
         <p class="lead">
-          For bookings, partnerships, and corporate inquiries, contact us directly on WhatsApp.
+          Fastest way: WhatsApp. For partnerships and official communication, use email.
         </p>
 
         <div class="grid">
-          <div class="col-12">
-            <div class="card">
-              <div class="title">WhatsApp (24/7)</div>
-              <div class="divider"></div>
-              <a class="btn primary" href="https://wa.me/905345940818" target="_blank" rel="noopener">
-                Message Alarab Global
-              </a>
-              <div class="divider"></div>
-              <div class="notice">
-                Next step: add official email, company addresses, and multilingual switch.
-              </div>
+          <div class="card col-6">
+            <div class="service">
+              <div class="title">WhatsApp</div>
+              <p class="desc">
+                <a class="btn primary" href="https://wa.me/905345940818" target="_blank" rel="noopener">Open WhatsApp</a>
+              </p>
+            </div>
+          </div>
+          <div class="card col-6">
+            <div class="service">
+              <div class="title">Email</div>
+              <p class="desc">
+                <a class="btn" href="mailto:info@alarabtour.com">info@alarabtour.com</a>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <footer class="footer">
-        <div>© 2025 Alarab Global Holdings Inc.</div>
+        <div>© <span id="y"></span> Alarab Global Holdings Inc. — All rights reserved.</div>
         <div>
+          <a href="#about">About</a> ·
           <a href="#services">Services</a> ·
-          <
+          <a href="#contact">Contact</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
